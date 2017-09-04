@@ -1,12 +1,18 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <i-nav></i-nav>
   </div>
 </template>
 
 <script>
+import INav from '@/components/i-nav';
+
 export default {
   name: 'app',
+  components: {
+    INav,
+  },
 };
 </script>
 
