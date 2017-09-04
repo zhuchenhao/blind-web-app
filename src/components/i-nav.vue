@@ -40,5 +40,8 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+.tabbar__item.router-link-exact-active.router-link-active .tabbar__icon {
+  color: red;
+}
 </style>
