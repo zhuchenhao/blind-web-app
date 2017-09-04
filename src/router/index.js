@@ -1,7 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Hello from '@/components/Hello';
 import NotFound from '@/components/404';
+import Home from '@/pages/home/index';
+import Search from '@/pages/search/index';
+import Edit from '@/pages/edit/index';
+import Bell from '@/pages/bell/index';
+import Person from '@/pages/person/index';
 
 Vue.use(Router);
 
@@ -10,8 +14,28 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello,
+      name: 'Home',
+      component: Home,
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search,
+    },
+    {
+      path: '/edit',
+      name: 'Edit',
+      component: Edit,
+    },
+    {
+      path: '/bell',
+      name: 'Bell',
+      component: Bell,
+    },
+    {
+      path: '/person',
+      name: 'Person',
+      component: Person,
     },
     {
       path: '*',

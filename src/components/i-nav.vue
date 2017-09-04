@@ -1,40 +1,35 @@
 <template lang="html">
   <nav>
     <div class="tabbar">
-      <label class="tabbar__item">
-        <input type="radio" name="tabbar-a" checked="checked">
-        <button class="tabbar__button">
-          <i class="tabbar__icon ion-home"></i>
-        </button>
-      </label>
+        <router-link :to="{ name: 'Home'}" class="tabbar__item">
+          <button class="tabbar__button">
+            <i class="tabbar__icon ion-home"></i>
+          </button>
+        </router-link>
 
-      <label class="tabbar__item">
-        <input type="radio" name="tabbar-a">
-        <button class="tabbar__button">
-          <i class="tabbar__icon ion-search"></i>
-        </button>
-      </label>
+        <router-link :to="{ name: 'Search'}" class="tabbar__item">
+          <button class="tabbar__button">
+            <i class="tabbar__icon ion-search"></i>
+          </button>
+        </router-link>
 
-      <label class="tabbar__item">
-        <input type="radio" name="tabbar-a">
-        <button class="tabbar__button">
-          <i class="tabbar__icon ion-edit"></i>
-        </button>
-      </label>
+        <router-link :to="{ name: 'Edit'}" class="tabbar__item">
+          <button class="tabbar__button">
+            <i class="tabbar__icon ion-edit"></i>
+          </button>
+        </router-link>
 
-      <label class="tabbar__item">
-        <input type="radio" name="tabbar-a">
-        <button class="tabbar__button">
-          <i class="tabbar__icon ion-ios-bell"></i>
-        </button>
-      </label>
+        <router-link :to="{ name: 'Bell'}" class="tabbar__item">
+          <button class="tabbar__button">
+            <i class="tabbar__icon ion-ios-bell"></i>
+          </button>
+        </router-link>
 
-      <label class="tabbar__item">
-        <input type="radio" name="tabbar-a">
-        <button class="tabbar__button">
-          <i class="tabbar__icon ion-person"></i>
-        </button>
-      </label>
+        <router-link :to="{ name: 'Person'}" class="tabbar__item">
+          <button class="tabbar__button">
+            <i class="tabbar__icon ion-person"></i>
+          </button>
+        </router-link>
 
     </div>
   </nav>
