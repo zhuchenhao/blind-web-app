@@ -1,16 +1,18 @@
 <template lang="html">
-  <div class="">
+  <div class="home">
     <home-header></home-header>
-    <h1>Home</h1>
+    <topics></topics>
   </div>
 </template>
 
 <script>
 import HomeHeader from './_homeheader';
+import topics from './_topics';
 
 export default {
   components: {
     HomeHeader,
+    topics,
   },
 };
 </script>
