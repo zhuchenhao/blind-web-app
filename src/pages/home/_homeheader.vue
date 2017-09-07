@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>topics</h1>
+    <h1>Topics</h1>
   </header>
 </template>
 
@@ -13,7 +13,11 @@ export default {
 header {
   position: fixed;
   top: 0;
-  background-color: grey;
+  background-color: #357BE8;
   width: 100%;
+}
+h1 {
+  font-weight: 500;
+  font-size: 24px;
 }
 </style>
