@@ -1,26 +1,26 @@
 <template lang="html">
   <div class="topics">
     <div class="">
-      <button class="button">Engineer</button>
-      <button class="button">SF BAY</button>
-      <button class="button">Misc.</button>
-      <button class="button">Startups</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
-      <button class="button">Seattle</button>
+      <button
+        class="button"
+        v-for= "topic in topics"
+        :style="{'background-color': topic.color}"
+       >
+        {{topic.name}}
+     </button>
     </div>
   </div>
 </template>
 
 <script>
+import topics from './topics.json';
+
 export default {
+  data() {
+    return {
+      topics,
+    };
+  },
 };
 </script>
 

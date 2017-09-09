@@ -1,0 +1,25 @@
+[{
+  "id": 1,
+  "name": "Engineering",
+  "color": "#6d64a4"
+},
+{
+  "id": 2,
+  "name": "SF Bay",
+  "color": "#43a1db"
+},
+{
+  "id": 3,
+  "name": "Misc.",
+  "color": "#00bcc1"
+},
+{
+  "id": 4,
+  "name": "Startups",
+  "color": "#707c96"
+},
+{
+"id": 5,
+"name": "Seattle",
+"color": "#6381d9"
+}]
