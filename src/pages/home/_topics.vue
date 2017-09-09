@@ -1,13 +1,14 @@
 <template lang="html">
   <div class="topics">
     <div class="">
-      <button
+      <router-link
         class="button"
         v-for= "topic in topics"
         :style="{'background-color': topic.color}"
-       >
+        :to="{ name: 'topics-detail', params: {id: topic.id}}"
+      >
         {{topic.name}}
-     </button>
+     </router-link>
     </div>
   </div>
 </template>

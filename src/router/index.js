@@ -6,6 +6,7 @@ import Search from '@/pages/search/index';
 import Edit from '@/pages/edit/index';
 import Bell from '@/pages/bell/index';
 import Person from '@/pages/person/index';
+import TopicDetail from '@/pages/home/topics-detail/index';
 
 Vue.use(Router);
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/person',
       name: 'Person',
       component: Person,
+    },
+    {
+      path: '/topics-detail/:id',
+      name: 'topics-detail',
+      component: TopicDetail,
     },
     {
       path: '*',
