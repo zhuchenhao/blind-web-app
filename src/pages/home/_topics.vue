@@ -6,6 +6,7 @@
         v-for= "topic in topics"
         :style="{'background-color': topic.color}"
         :to="{ name: 'topics-detail', params: {id: topic.id}}"
+        :key="topic.id"
       >
         {{topic.name}}
      </router-link>

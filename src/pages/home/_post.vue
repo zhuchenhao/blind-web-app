@@ -1,11 +1,12 @@
 <template lang="html">
   <div class="posts">
-    <div class="card" v-for= "post in posts">
+    <div class="card" v-for= "post in posts" :key="post.id">
       <div class="card__content">
         <router-link
           class="card__tag"
           v-for= "topic in post.topics"
           :to="{ name: 'topics-detail', params: {id: topic.id} }"
+          :key="topic.id"
         >
           {{topic.name}}
         </router-link>
