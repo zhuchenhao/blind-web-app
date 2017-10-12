@@ -15,6 +15,7 @@ header {
   top: 0;
   background-color: #357BE8;
   width: 100%;
+  z-index: 1;
 }
 h1 {
   font-weight: 500;
