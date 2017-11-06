@@ -1,47 +1,57 @@
 <template lang="html">
   <div>
-    <header class="edit-header">
-      <span style="color: #3468e7" @click="goBack">Cancel</span>
-      <span>Topics</span>
-      <span>Post</span>
-    </header>
-    <div class="select-topics">
-      <select class="select-input">
-        <option>
-          Choose a topic
-        </option>
-        <option>Women in tech</option>
-        <option>Facebook</option>
-      </select>
-    </div>
-    <div class="content">
-      <div class="content-subject">
-        <input type="text"
-        class="text-input text-input--underbar"
-        placeholder="Subject"
-        ref="subject">
+    <template v-if="!showAt">
+      <header class="edit-header">
+        <span style="color: #3468e7" @click="goBack">Cancel</span>
+        <span>Topics</span>
+        <span>Post</span>
+      </header>
+      <div class="select-topics">
+        <select class="select-input">
+          <option>
+            Choose a topic
+          </option>
+          <option>Women in tech</option>
+          <option>Facebook</option>
+        </select>
       </div>
-      <div class="content-text">
-        <textarea class="textarea textarea--transparent" rows="3" placeholder="Keep it relevant. If the "></textarea>
+      <div class="content">
+        <div class="content-subject">
+          <input type="text"
+          class="text-input text-input--underbar"
+          placeholder="Subject"
+          ref="subject">
+        </div>
+        <div class="content-text">
+          <textarea class="textarea textarea--transparent" rows="3" placeholder="Keep it relevant. If the "></textarea>
+        </div>
+        <div class="content-text">
+          <textarea class="textarea textarea--transparent" rows="3" placeholder="@Company/Job Title."></textarea>
+        </div>
+        <div class="icons">
+          <i class="ion-ios-camera"></i>
+          <i class="ion-ios-at" @click="showAt = true"></i>
+        </div>
       </div>
-      <div class="content-text">
-        <textarea class="textarea textarea--transparent" rows="3" placeholder="@Company/Job Title."></textarea>
-      </div>
-      <div class="icons">
-        <i class="ion-ios-camera"></i>
-        <i class="ion-ios-at"></i>
-      </div>
-    </div>
+    </template>
+    <at v-else @close-at="showAt=false"></at>
   </div>
 </template>
 
 <script>
+import at from './_at';
 
 export default {
+  components: {
+    at,
+  },
   methods: {
     goBack() {
       window.history.back();
     },
+  },
+  data() {
+    return { showAt: false };
   },
   mounted() {
     this.$refs.subject.focus();
@@ -50,7 +60,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-  .edit-header {
+  .edit-header{
     background-color: #fefefe;
     display: flex;
     justify-content: space-between;

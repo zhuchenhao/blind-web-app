@@ -13,7 +13,6 @@
       >
       <span v-if="focused" style="color: #3468e7">cancel</span>
     </div>
-    <p>{{focused}}</p>
   </div>
 </template>
 
