@@ -24,6 +24,13 @@
       <div class="content-text">
         <textarea class="textarea textarea--transparent" rows="3" placeholder="Keep it relevant. If the "></textarea>
       </div>
+      <div class="content-text">
+        <textarea class="textarea textarea--transparent" rows="3" placeholder="@Company/Job Title."></textarea>
+      </div>
+      <div class="icons">
+        <i class="ion-ios-camera"></i>
+        <i class="ion-ios-at"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -77,5 +84,12 @@ export default {
     width: 100%;
     height: 140px;
     border-bottom: 1px solid #eee;
+  }
+  .icons {
+    text-align: left;
+    color: #bbb;
+  }
+  .ion-ios-camera {
+    margin-right: 10px;
   }
 </style>
