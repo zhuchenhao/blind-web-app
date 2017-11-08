@@ -11,7 +11,6 @@
 <script>
 
 export default {
-  props: ['showAt'],
   methods: {
     cancel() {
       this.$emit('close-at');
